@@ -14,7 +14,7 @@ def square_root(a):
         raise ValueError("Invalid input for square root")
     return math.sqrt(a)
 
-def hypoteneuse(a, b):
+def hypotenuse(a, b):
     return math.hypot(a,b)
 
 
