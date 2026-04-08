@@ -5,13 +5,18 @@ calculator.py
 One function per operation, in order.
 """
 # First example
+
+
+import math
+
+
 def add(a, b): 
     return a + b
 
-def sub(a, b):
+def subtract(a, b):
     return a - b
 
-def mul(a, b):
+def multiply(a, b):
     return a * b
 
 def divide(a, b):
@@ -19,10 +24,10 @@ def divide(a, b):
         raise ZeroDivisionError("Cannot divide")
     return b / a
 
-def log(a, b):
-    if a<=0 or b<=0 or a<=1:
-        raise ValueError("invalid")
-    return math.log(b,a)
+def logarithm(a,b):
+    if a<= 0 or a == 1 or b <= 0:
+        raise ValueError("Invalid input for log")
+    return math.log(b, a)
 
-def exp(a, b):
+def exponent (a,b):
     return a**b
