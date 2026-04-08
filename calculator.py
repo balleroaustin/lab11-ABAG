@@ -1,11 +1,6 @@
-"""
-calculator.py
-- Defines functions used to create a simple calculator
-
-One function per operation, in order.
-"""
-# First example
-
+#https://github.com/balleroaustin/lab11-ABAG.git
+#Partner 1: Austin Ballero
+#Partner 2: Abrahan Gil
 
 import math
 
