@@ -9,6 +9,14 @@ One function per operation, in order.
 
 import math
 
+def square_root(a):
+    if a < 0:
+        raise ValueError("Invalid input for square root")
+    return math.sqrt(a)
+
+def hypoteneuse(a, b):
+    return math.hypot(a,b)
+
 
 def add(a, b): 
     return a + b
