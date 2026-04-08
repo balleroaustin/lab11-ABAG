@@ -9,3 +9,8 @@ def add(a, b):
     pass
 
 
+def divide(a, b):
+    if a == 0:
+        raise ZeroDivisionError("Cannot divide")
+    return b / a
+
