@@ -5,14 +5,14 @@ class TestCalculator(unittest.TestCase):
 
     ######### Partner 2
     def test_add(self): # 3 assertions
-        assert add(1, 4) == 5
-        assert add (-2 , 2) == 0
-        assert add (0, 0 ) == 0
+        self.assertEqual(calculator.add(1, 4),  5)
+        self.assertEqual(calculator.add(-2 , 2), 0)
+        self.assertEqual(calculator.add(0, 0 ) ,0)
 
     def test_subtract(self): # 3 assertions
-        assert subtract (10, 5) == 5
-        assert subtract (2, 5) == -3
-        assert subtract (0, 0) == 0
+        self.assertEqual(calculator.subtract(10, 5),5)
+        self.assertEqual(calculator.subtract(2, 5), -3)
+        self.assertEqual(calculator.subtract(0, 0), 0)
 
     ######## Partner 1
     def test_multiply(self): # 3 assertions
@@ -22,27 +22,27 @@ class TestCalculator(unittest.TestCase):
 
 
     def test_divide(self): # 3 assertions
-        self.assertEqual(calculator.div(2,10),5)
-        self.assertEqual(calculator.div(4,20),5)
+        self.assertEqual(calculator.div(10,2),5)
+        self.assertEqual(calculator.div(20,4),5)
         with self.assertRaises(ZeroDivisionError):
-            calculator.div(0,5)
+            calculator.div(5,0)
 
 
 
     ######## Partner 2
     def test_divide_by_zero(self): # 1 assertion
         with self.assertRaises(ZeroDivisionError):
-            div(0, 5)
+            calculator.div(5, 0)
 
     def test_logarithm(self): # 3 assertions
-        self.assertEqual(logarithm(10,100),2)
-        self.assertEqual(logarithm(3, 9), 2)
-        self.assertEqual(logarithm(2, 8),3)
+        self.assertEqual(calculator.logarithm(100,10),2)
+        self.assertEqual(calculator.logarithm(9, 3), 2)
+        self.assertEqual(calculator.logarithm(8, 2),3)
 
 
     def test_log_invalid_base(self): # 1 assertion
         with self.assertRaises(ValueError):
-            logarithm(1, 20)
+            calculator.logarithm(1, 20)
     
     ######## Partner 1
     def test_log_invalid_argument(self): # 1 assertion
